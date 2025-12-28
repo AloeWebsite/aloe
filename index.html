@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALOE | Discord Community</title>
+    <style>
+        :root {
+            --brand-color: #1abc9c;
+            --bg-dark: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --text-light: #ffffff;
+            --text-gray: #a0a0a0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: rgba(15, 15, 15, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--brand-color);
+            letter-spacing: 3px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, #1abc9c15 0%, #0f0f0f 80%);
+        }
+
+        .hero-main-img {
+            width: 220px;
+            filter: drop-shadow(0 0 30px #1abc9c44);
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Community & Widget Section */
+        .community-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            padding: 80px 10%;
+            background: #141414;
+        }
+
+        .rules-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+        }
+
+        .widget-container {
+            flex: 0;
+            min-width: 350px;
+        }
+
+        .section-title {
+            color: var(--brand-color);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+        }
+
+        .rule-card {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .rule-card:hover {
+            transform: translateX(10px);
+            border-left: 4px solid var(--brand-color);
+        }
+
+        .rule-num {
+            color: var(--brand-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Buttons */
+        .cta-button {
+            background: var(--brand-color);
+            color: white;
+            padding: 16px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 0 25px #1abc9c66;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            padding: 60px;
+            text-align: center;
+            border-top: 1px solid #222;
+            color: var(--text-gray);
+        }
+
+        @media (max-width: 768px) {
+            .community-section { flex-direction: column; align-items: center; }
+            .widget-container { width: 100%; min-width: unset; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo-area">
+            <img src="ALOE_pfp.webp" alt="Logo" class="logo-img">
+            ALOE
+        </a>
+        <a href="https://discord.gg/jknMPpjx" target="_blank" class="cta-button" style="padding: 10px 25px; margin: 0;">Join Server</a>
+    </nav>
+
+    <header class="hero">
+        <img src="Untitled_design-removebg-preview.png" alt="ALOE mascot" class="hero-main-img">
+        <h1 style="font-size: 3.5rem; margin-top: 20px;">Grow With <span style="color:var(--brand-color)">ALOE</span></h1>
+        <p style="max-width: 600px; color: var(--text-gray);">A refreshing community for thinkers and creators. Join our sanctuary and connect with like-minded individuals.</p>
+        <a href="https://discord.gg/jknMPpjx" target="_blank" class="cta-button">Enter the Sanctuary</a>
+    </header>
+
+    <section class="community-section">
+        <div class="rules-container">
+            <h2 class="section-title">Community Rules</h2>
+            
+            <div class="rule-card">
+                <div class="rule-num">01</div>
+                <div><strong>Respect</strong><p style="margin:0; font-size:0.9rem; color:var(--text-gray)">Treat all members with kindness and common courtesy.</p></div>
+            </div>
+
+            <div class="rule-card">
+                <div class="rule-num">02</div>
+                <div><strong>No Spam</strong><p style="margin:0; font-size:0.9rem; color:var(--text-gray)">Keep text and media relevant to the channel you are in.</p></div>
+            </div>
+
+            <div class="rule-card">
+                <div class="rule-num">03</div>
+                <div><strong>Be Constructive</strong><p style="margin:0; font-size:0.9rem; color:var(--text-gray)">We grow together. Help others thrive in our sanctuary.</p></div>
+            </div>
+        </div>
+
+        <div class="widget-container">
+            <h2 class="section-title">Live Status</h2>
+            <iframe src="https://discord.com/widget?id=1444448572530495641&theme=dark" width="350" height="420" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <img src="ALOE_pfp2.webp" alt="ALOE Icon" style="width: 50px; margin-bottom: 20px; opacity: 0.6;">
+        <p>&copy; 2025 ALOE Community. Built with #1abc9c.</p>
+    </footer>
+
+</body>
+</html>
